@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled4/const/colors.dart';
 
 
 
@@ -7,6 +8,9 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: backGroundColor,
+      appBar: AppBar(),
+    );
   }
 }
