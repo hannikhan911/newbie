@@ -3,9 +3,7 @@ import 'package:untitled4/const/colors.dart';
 import 'package:untitled4/const/images.dart';
 import 'package:untitled4/reuseables/Text.widget.dart';
 import 'package:untitled4/reuseables/container.widget.dart';
-
-
-
+import 'package:untitled4/reuseables/custom_sized.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -21,50 +19,59 @@ class SignupScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                height: MediaQuery.sizeOf(context).height*0.15,
-                width: MediaQuery.sizeOf(context).width*0.25,
-decoration: BoxDecoration(
-  borderRadius: BorderRadius.all(Radius.circular(10)),
-),
-child:Image(image: AssetImage(loginImage)),
+                height: MediaQuery.sizeOf(context).height * 0.15,
+                width: MediaQuery.sizeOf(context).width * 0.25,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                child: Image(image: AssetImage(loginImage)),
               ),
             ],
           ),
-
-Row(
-  children: [
-    SizedBox(width: 20,),
-LargeText(headText:'Login', fontsize: 20,fontweight:FontWeight.w700,)
-  ],
-),
-          SizedBox(height: 5,),
           Row(
             children: [
-              SizedBox(width: 20,),
-              SmallText(smallText: 'Select your country and Enter your phone number', fontsize: 14,fontweight: FontWeight.w400,textcolor: smallTextColor,)
+              SizedBox(
+                width: 20,
+              ),
+              LargeText(
+                headText: 'Login',
+                fontsize: 20,
+                fontweight: FontWeight.w700,
+              )
             ],
+          ),
+          SizedBox(
+            height: 10,
           ),
           Row(
             children: [
-              Containerwithflag(mainContaineerwithflag: Container(
-                child:
-                Row(
-                  children: [
-                    SizedBox(width:5,),
-                    Image(image: AssetImage(countryFlag)),
-                    SizedBox(
-                      width: 5,
-                    ),
-
-                    SmallText(smallText: 'Phone Number', fontsize: 14)
-                  ],
-                ),
-              ),containerWidth:1,containerHeight: 0.048,countainerBorderColor: countainerColor,borderRadius: BorderRadius.all(Radius.circular(10)),)
+              SizedBox(
+                width: 20,
+              ),
+              SmallText(
+                smallText: 'Select your country and Enter your phone number',
+                fontsize: 14,
+                fontweight: FontWeight.w400,
+                textcolor: smallTextColor,
+              )
             ],
           ),
-        ],
+          CustomSized(
+            height: 0.010,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Containerwithflag(title: 'Phone Number',containerHeight: 0.055,),
+          ),
+        CustomSized(
+          height: 0.04,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: MostUseableContainer(title: 'Login',containerHeight: 0.055,containerWidth: 1,bordercolor: countainerColor ,),
+        )],
+        
       ),
-
     );
   }
 }

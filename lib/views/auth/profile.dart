@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:untitled4/const/colors.dart';
 import 'package:untitled4/const/images.dart';
-import 'package:untitled4/reuseables/Text.widget.dart';
 import 'package:untitled4/reuseables/chip_widget.dart';
 
 class Profile extends StatelessWidget {
@@ -28,7 +27,7 @@ class Profile extends StatelessWidget {
               ChipWidget(title: 'fnowe'),
             ],
           ),
-          SvgPicture.asset(filterIcon,color: backGroundColor,),
+          SvgPicture.asset(filterIcon,color: bgContainerColor,),
         ],
       ),
     );
