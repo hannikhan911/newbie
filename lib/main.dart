@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled4/otp_.dart';
-import 'package:untitled4/splash_%20screen.dart';
-import 'package:untitled4/views/auth/signup_screen.dart';
+import 'package:untitled4/views/auth/profile.dart';
 
 
 void main() {
@@ -13,8 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Otp(),
+      home: (Profile()),
     );
   }
 }
-

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Otp extends StatelessWidget {
-  const Otp({super.key});
+class Otp_verify extends StatelessWidget {
+  const Otp_verify({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -69,49 +69,64 @@ class Otp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
+                alignment: Alignment.center,
                 height: 50,
                 width: 52,
                 decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.black54,
+                      color: Color(0xFF028285),
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: Text('5',style: TextStyle(color: Colors.black,
+                fontSize: 20,fontWeight: FontWeight.w900
+                ),),
               ),
               SizedBox(
                 width: 10,
               ),
               Container(
+                alignment: Alignment.center,
                 height: 50,
                 width: 52,
                 decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.black54,
+                      color: Color(0xFF028285),
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: Text('1',style: TextStyle(color: Colors.black,
+                    fontSize: 20,fontWeight: FontWeight.w900
+                ),),
               ),
               SizedBox(
                 width: 10,
               ),
               Container(
+                alignment: Alignment.center,
                 height: 50,
                 width: 52,
                 decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.black54,
+                      color:Color(0xFF028285),
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: Text('8',style: TextStyle(color: Colors.black,
+                    fontSize: 20,fontWeight: FontWeight.w900
+                ),),
               ),
               SizedBox(
                 width: 10,
               ),
-              Container(
+              Container(alignment: Alignment.center,
                 height: 50,
                 width: 52,
                 decoration: BoxDecoration(
                     border: Border.all(
-                      color: Colors.black54,
+                      color: Color(0xFF028285),
                     ),
                     borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: Text('0',style: TextStyle(color: Colors.black,
+                    fontSize: 20,fontWeight: FontWeight.w900
+                ),),
               ),
             ],
           ),
@@ -125,7 +140,7 @@ class Otp extends StatelessWidget {
                 width: 20,
               ),
               Container(
-                decoration: BoxDecoration(color: Color(0xFFB3B3B3),
+                decoration: BoxDecoration(color: Color(0xFF028285),
                     borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
                 height: 50,
@@ -145,31 +160,6 @@ class Otp extends StatelessWidget {
                   ],
                 ),
               ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 35,
-              ),
-              Text(
-                'Don’t receive OTP?',
-                style: TextStyle(
-                  color: Colors.black54,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 13,
-                ),
-              ),
-              SizedBox(
-                width: 2,
-              ),
-              Text('Send again',style: TextStyle(
-                color: Color(0xFF028285
-                ),
-                fontWeight: FontWeight.w500,
-                fontSize: 13,
-              ),),
             ],
           ),
         ],

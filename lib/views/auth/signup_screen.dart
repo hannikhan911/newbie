@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:untitled4/const/colors.dart';
 import 'package:untitled4/const/images.dart';
 import 'package:untitled4/reuseables/Text.widget.dart';
+import 'package:untitled4/reuseables/container.widget.dart';
 
 
 
@@ -43,8 +44,24 @@ LargeText(headText:'Login', fontsize: 20,fontweight:FontWeight.w700,)
               SmallText(smallText: 'Select your country and Enter your phone number', fontsize: 14,fontweight: FontWeight.w400,textcolor: smallTextColor,)
             ],
           ),
-          
+          Row(
+            children: [
+              Containerwithflag(mainContaineerwithflag: Container(
+                child:
+                Row(
+                  children: [
+                    SizedBox(width:5,),
+                    Image(image: AssetImage(countryFlag)),
+                    SizedBox(
+                      width: 5,
+                    ),
 
+                    SmallText(smallText: 'Phone Number', fontsize: 14)
+                  ],
+                ),
+              ),containerWidth:1,containerHeight: 0.048,countainerBorderColor: countainerColor,borderRadius: BorderRadius.all(Radius.circular(10)),)
+            ],
+          ),
         ],
       ),
 
