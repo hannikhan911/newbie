@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled4/views/auth/profile.dart';
+import 'package:untitled4/views/auth/profile2.dart';
 
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Profile(),
+      home: Profile2(),
     );
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:untitled4/const/colors.dart';
 import 'package:untitled4/const/images.dart';
 import 'package:untitled4/reuseables/Text.widget.dart';
 import 'package:untitled4/reuseables/custom_sized.dart';
@@ -24,14 +26,12 @@ class Profile2 extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                  height: MediaQuery.sizeOf(context).height * 0.3,
-                  width: MediaQuery.sizeOf(context).width * 0.3,
-                  decoration: BoxDecoration(shape: BoxShape.circle),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [Image.asset(profilepicture)],
-                  )),
+              Stack(
+
+                children: [
+                  Image(image: AssetImage(profilepicture)),
+                ],
+              ),
             ],
           ),
         ],
