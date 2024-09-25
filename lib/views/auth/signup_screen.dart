@@ -4,6 +4,7 @@ import 'package:untitled4/const/images.dart';
 import 'package:untitled4/reuseables/Text.widget.dart';
 import 'package:untitled4/reuseables/container.widget.dart';
 import 'package:untitled4/reuseables/custom_sized.dart';
+import 'package:untitled4/views/auth/otp_.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -68,7 +69,11 @@ class SignupScreen extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: MostUseableContainer(title: 'Login',containerHeight: 0.055,containerWidth: 1,bordercolor: countainerColor ,),
+          child: InkWell(  onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Otp()));
+          },
+              child: MostUseableContainer(title: 'Login',containerHeight: 0.055,containerWidth: 1,bordercolor: countainerColor ,)),
         )],
         
       ),

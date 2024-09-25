@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:untitled4/views/auth/otp_.dart';
+import 'package:untitled4/views/auth/otp_verification.dart';
 import 'package:untitled4/views/auth/profile.dart';
-import 'package:untitled4/views/auth/profile2.dart';
+import 'package:untitled4/views/auth/profile_2.dart';
+import 'package:untitled4/views/auth/profile_3.dart';
+import 'package:untitled4/views/auth/splash_%20screen.dart';
 
 
 void main() {
@@ -12,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Profile2(),
+      home: Profile3()
     );
   }
 }

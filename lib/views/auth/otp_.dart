@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled4/views/auth/otp_verification.dart';
 
 class Otp extends StatelessWidget {
   const Otp({super.key});
@@ -116,36 +117,43 @@ class Otp extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 50,
-            width: 20,
+            height: 30,
+
           ),
-          Row(
-            children: [
-              SizedBox(
-                width: 20,
-              ),
-              Container(
-                decoration: BoxDecoration(color: Color(0xFFB3B3B3),
-                  borderRadius: BorderRadius.all(Radius.circular(10))
-                ),
-                height: 50,
-                width: 350,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Verify',
-                      style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
-                        
-                      ),
+          Padding(
+            padding: const EdgeInsets.all(30),
+            child: Row(
+              children: [
+
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Otpverify()));
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(color: Color(0xFFB3B3B3),
+                      borderRadius: BorderRadius.all(Radius.circular(10))
                     ),
-                  ],
+                    height: 50,
+                    width: 350,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Verify',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

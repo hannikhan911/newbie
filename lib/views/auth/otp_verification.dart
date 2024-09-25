@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:untitled4/views/auth/profile_2.dart';
 
-class Otp_verify extends StatelessWidget {
-  const Otp_verify({super.key});
+class Otpverify extends StatelessWidget {
+  const Otpverify({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -131,36 +132,47 @@ class Otp_verify extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 50,
-            width: 20,
-          ),
-          Row(
-            children: [
-              SizedBox(
-                width: 20,
-              ),
-              Container(
-                decoration: BoxDecoration(color: Color(0xFF028285),
-                    borderRadius: BorderRadius.all(Radius.circular(10))
-                ),
-                height: 50,
-                width: 350,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Verify',
-                      style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600,
+            height: 30,
 
-                      ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(30),
+            child: Row(
+              children: [
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Profile2()));
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(color: Color(0xFF028285),
+                        borderRadius: BorderRadius.all(Radius.circular(10))
                     ),
-                  ],
+                    height: 50,
+                    width: 350,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        InkWell( onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Profile2()));
+                        },
+                          child: Text(
+                            'Verify',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

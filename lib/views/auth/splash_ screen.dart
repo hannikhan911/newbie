@@ -14,5 +14,6 @@ class Splash extends StatelessWidget {
           image:
               DecorationImage(image: AssetImage('assets/images/image 1.png'))),
     );
+
   }
 }
